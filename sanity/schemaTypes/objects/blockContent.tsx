@@ -1,4 +1,4 @@
-import { AArrowUp, HighlighterIcon, Superscript } from "lucide-react";
+import { AArrowUp, HighlighterIcon, Superscript, TypeOutline } from "lucide-react";
 import React from "react";
 import { defineField, defineType } from "sanity";
 
@@ -46,6 +46,14 @@ export const commonRichFields = [
             <span className="text-xl font-bold">{children}</span>
           ),
         },
+        {
+          title: 'Gredient Text',
+          value: 'gredientText',
+          icon: () => <TypeOutline />,
+          component: ({children}: { children: React.ReactNode}) => (
+            <span className="bg-clip-text bg-linear-to-r from-green via-cyan to-purple text-transparent">{children}</span>
+          )
+        }
       ],
       annotations: [
         {

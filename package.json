@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "format": "npx prettier . --write",
+    "prebuild": "npm run lint && npm run format && npm run typegen",
+    "typegen": "sanity schema extract --enforce-required-fields && sanity typegen generate"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

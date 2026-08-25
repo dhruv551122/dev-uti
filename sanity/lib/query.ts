@@ -1,41 +1,25 @@
 import { groq } from "next-sanity";
 
+const seoField = `
+        seo{
+            ...,
+            seoImage{
+                asset->{
+                    url,
+                }
+            }
+        }`
+
 export const settingQuery = groq`
 *[_type == 'settings' && _id == 'settings'][0]{
     ...,
 }
 `;
 
-export const home_v2PageQuery = groq`
+export const homePageQuery = groq`
     *[ _type == "homePage" && _id == 'homePage'][0]{
         ...,
-        seo{
-            ...,
-            seoImage{
-                ...,
-                asset->{
-                    url,
-                }
-            }
-        },
-    }
-`;
-
-export const homePageQuery = groq`
-    *[ _type == "home" && _id == 'home'][0]{
-        ...,
-        seo{
-            ...,
-            seoImage{
-                ...,
-                asset->,
-            }
-        },
-        "stats": *[ _type == "settings" && _id == "settings"][0]{
-        statsList[]{
-            ...,
-        }
-    },
+        ${seoField},
     }
 `;
 

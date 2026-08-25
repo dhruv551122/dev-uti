@@ -47,17 +47,29 @@ export default defineConfig({
     simplerColorInput({
       defaultColorFormat: "rgba",
       defaultColorList: [
-        { label: "Deep Bright Red", value: "#ab0101" },
-        { label: "Nero", value: "#170504" },
-        { label: "Ivory", value: "#f8f4ef" },
-        { label: "Dark", value: "#111111" },
-        { label: "Deep Burgundy", value: "#5a0b18" },
-        { label: "Dark Charcoal Gray", value: "#2e2e2e" },
-        { label: "Light Gray", value: "#d9d5d1" },
+        { label: "secondary", value: "#080e1c" },
+
+        { label: "panel", value: "#0b1222" },
+        { label: "panel-light", value: "#101a2e" },
+
+        { label: "border", value: "#18243a" },
+        { label: "border-light", value: "#24324c" },
+
+        { label: "text-primary", value: "#f8fafc" },
+        { label: "text-secondary", value: "#94a3b8" },
+        { label: "text-muted", value: "#64748b" },
+
+        { label: "green", value: "#39e58c" },
+        { label: "cyan", value: "#22d3ee" },
+        { label: "blue", value: "#3b82f6" },
+        { label: "purple", value: "#a855f7" },
+        { label: "pink", value: "#ec4899" },
+        { label: "yellow", value: "#facc15" },
+        { label: "rich-black", value: "#040A14" }
       ],
       enableSearch: true,
       showColorValue: true,
     }),
-    
+
   ],
 });

@@ -174,3 +174,21 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@utility max-width-container {
+  @apply mx-auto max-w-480;
+}
+
+@utility max-content-pannel {
+  @apply mx-auto px-4 py-8 sm:px-8 lg:px-21 md:py-16;
+}
