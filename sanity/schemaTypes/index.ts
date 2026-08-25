@@ -1,0 +1,33 @@
+import { LucideIcon } from "lucide-react";
+
+import { objects } from "./objects";
+import {
+  documents,
+  singletons,
+  multiTypes as multiTypesArray,
+} from "./documents";
+
+export const schemaTypes = [...documents, ...objects];
+
+export const schemaNames = [...documents, ...objects].map((doc) => doc.name);
+
+export type SchemaType = (typeof schemaNames)[number];
+
+export const singletonType = singletons.map((doc) => doc.name);
+
+export type SingletonType = (typeof singletonType)[number];
+
+export const multiTypes = multiTypesArray.map(
+  (doc: { name: string }) => doc.name,
+);
+
+export type MultiType = (typeof multiTypes)[number];
+
+export type StructureChild = {
+  name: string;
+  icon?: LucideIcon;
+  singleton?: boolean;
+  orderable?: boolean;
+  groupByEndDate?: boolean;
+  children?: StructureChild[];
+};

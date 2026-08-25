@@ -47,7 +47,27 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  --color-rich-black: var(--rich-black) 
+  --color-rich-black: var(--rich-black)
+
+  --background-secondary: #080e1c;
+
+    --color-panel: var(--panel);
+    --color-panel-light: var(--panel-light);
+
+    --color-border: var(--border);
+    --color-border-light: var(--border-light);
+
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-muted: var(--text-muted);
+
+    --color-green: var(--green);
+    --color-cyan: var(--cyan);
+    --color-blue: var(--blue);
+    --color-purple: var(--purple);
+    --color-pink: var(--pink);
+    --color-yellow: var(--yellow);
+    --color-rich-black: var(--rich-black);
 }
 
 @media (prefers-color-scheme: dark) {
